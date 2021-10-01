@@ -50,7 +50,7 @@ function build_ios()
 
   IOS_SDK_VERSION=`xcodebuild -showsdks | grep iphoneos | egrep "[[:digit:]]+\.[[:digit:]]+" -o | tail -1`
   SDK_INCLUDE="${XCODE_DIR}/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include"
-  CFLAGS="-DBOOST_AC_USE_PTHREADS -DBOOST_SP_USE_PTHREADS -g -DNDEBUG \
+  CFLAGS=" -g -DNDEBUG \
       -std=c++14 -stdlib=libc++ -fvisibility=default \
       -fembed-bitcode -miphoneos-version-min=10.0"
 
